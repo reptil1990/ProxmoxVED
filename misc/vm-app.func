@@ -2,7 +2,7 @@
 
 # Copyright (c) 2021-2026 community-scripts ORG
 # Author: MickLesk (CanbiZ)
-# License: MIT | https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/LICENSE
+# License: MIT | https://raw.githubusercontent.com/reptil1990/ProxmoxVED/main/LICENSE
 
 # ==============================================================================
 # VM-APP.FUNC - DEPLOY LXC APPLICATIONS INSIDE VIRTUAL MACHINES
@@ -56,7 +56,7 @@ list_available_apps() {
   fi
 
   # Method 2: Gitea API (returns JSON array of files)
-  local api_url="https://git.community-scripts.org/api/v1/repos/community-scripts/ProxmoxVED/contents/install"
+  local api_url="https://git.community-scripts.org/api/v1/repos/reptil1990/ProxmoxVED/contents/install"
   local api_response
   api_response=$(curl -fsSL --connect-timeout 10 --max-time 30 "$api_url" 2>/dev/null) || true
 
@@ -71,7 +71,7 @@ list_available_apps() {
   fi
 
   # Method 3: GitHub API fallback
-  local gh_api_url="https://api.github.com/repos/community-scripts/ProxmoxVED/contents/install"
+  local gh_api_url="https://api.github.com/repos/reptil1990/ProxmoxVED/contents/install"
   api_response=$(curl -fsSL --connect-timeout 10 --max-time 30 "$gh_api_url" 2>/dev/null) || true
 
   if [[ -n "$api_response" ]]; then
