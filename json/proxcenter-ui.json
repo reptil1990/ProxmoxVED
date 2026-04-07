@@ -19,9 +19,9 @@
             "type": "default",
             "script": "ct/proxcenter-ui.sh",
             "resources": {
-                "cpu": 2,
-                "ram": 2048,
-                "hdd": 6,
+                "cpu": 4,
+                "ram": 4096,
+                "hdd": 10,
                 "os": "Debian",
                 "version": "13"
             }
