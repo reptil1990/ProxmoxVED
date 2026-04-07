@@ -1,0 +1,44 @@
+{
+    "name": "ProxCenter-UI",
+    "slug": "proxcenter-ui",
+    "categories": [
+        4
+    ],
+    "date_created": "2026-04-08",
+    "type": "ct",
+    "updateable": true,
+    "privileged": false,
+    "interface_port": 3000,
+    "documentation": "https://github.com/adminsyspro/proxcenter-ui/tree/main/docs",
+    "website": "https://proxcenter.io",
+    "logo": "https://raw.githubusercontent.com/adminsyspro/proxcenter-ui/main/frontend/public/favicon.ico",
+    "config_path": "/opt/proxcenter/frontend/.env",
+    "description": "ProxCenter is an alternative to VMware vCenter for Proxmox environments. It provides a modern, intuitive web interface to manage multiple Proxmox VE clusters and Proxmox Backup Server instances from a single pane of glass. This script installs the Community Edition bare-metal (no Docker).",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "ct/proxcenter-ui.sh",
+            "resources": {
+                "cpu": 2,
+                "ram": 2048,
+                "hdd": 6,
+                "os": "Debian",
+                "version": "13"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "On first access, create your admin account via the web UI at http://<IP>:3000",
+            "type": "info"
+        },
+        {
+            "text": "Secrets (APP_SECRET, NEXTAUTH_SECRET) are auto-generated and stored in /opt/proxcenter/frontend/.env",
+            "type": "info"
+        }
+    ]
+}
